@@ -15,7 +15,7 @@ interface AdminPanelProps {
 const AdminPanel = ({ onLogout }: AdminPanelProps) => {
   const [activeTab, setActiveTab] = useState<"contact" | "gallery">("contact");
   const [contactDetails, setContactDetails] = useState<ContactDetails>({
-    email: "hello@p12media.co.za",
+    email: "info@P12media.co.za",
     phone: "+27 82 555 0123",
     address: "Centurion, Gauteng, South Africa",
   });
