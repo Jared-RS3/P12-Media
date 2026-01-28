@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
         <div className="flex-1">
           <img
-            src="/public/P12 Media Nav Bar Logo 2.png"
+            src="/P12 Media Nav Bar Logo 2.png"
             alt="P12 Media Logo"
             className="h-16 w-auto object-contain mb-3"
           />

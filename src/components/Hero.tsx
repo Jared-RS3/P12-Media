@@ -38,7 +38,7 @@ const Hero = () => {
             style={{ animationDelay: "0.3s" }}
           >
             <img
-              src="/public/P12 media Logo Trans-01.png"
+              src="/P12 media Logo Trans-01.png"
               alt="P12 MEDIA"
               className="w-full max-w-md lg:max-w-none h-auto object-contain lg:scale-125"
             />

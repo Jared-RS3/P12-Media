@@ -45,14 +45,14 @@ export const useContactDetails = () => {
     // Custom event for same-tab updates
     window.addEventListener(
       "contactDetailsUpdated",
-      handleStorageChange as EventListener
+      handleStorageChange as EventListener,
     );
 
     return () => {
       window.removeEventListener("storage", handleStorageChange);
       window.removeEventListener(
         "contactDetailsUpdated",
-        handleStorageChange as EventListener
+        handleStorageChange as EventListener,
       );
     };
   }, []);

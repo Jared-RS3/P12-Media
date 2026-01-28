@@ -39,7 +39,7 @@ const AdminPanel = ({ onLogout }: AdminPanelProps) => {
     setTimeout(() => {
       localStorage.setItem(
         "p12_contact_details",
-        JSON.stringify(contactDetails)
+        JSON.stringify(contactDetails),
       );
       setIsSaving(false);
       setSaveMessage("Contact details saved successfully!");

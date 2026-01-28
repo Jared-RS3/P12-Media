@@ -37,14 +37,14 @@ const GalleryManager = () => {
       setGalleryItems(JSON.parse(savedGallery));
     } else {
       setGalleryItems([
-        { id: "1", url: "/public/0719.png", type: "image" },
-        { id: "2", url: "/public/0719(7).png", type: "image" },
-        { id: "3", url: "/public/0320(1).png", type: "image" },
-        { id: "4", url: "/public/0320(22).jpg", type: "image" },
-        { id: "5", url: "/public/0824(2).jpg", type: "image" },
-        { id: "6", url: "/public/0830.jpg", type: "image" },
-        { id: "7", url: "/public/P1244806.JPG", type: "image" },
-        { id: "8", url: "/public/0824(7).jpg", type: "image" },
+        { id: "1", url: "/0719.png", type: "image" },
+        { id: "2", url: "/0719(7).png", type: "image" },
+        { id: "3", url: "/0320(1).png", type: "image" },
+        { id: "4", url: "/0320(22).jpg", type: "image" },
+        { id: "5", url: "/0824(2).jpg", type: "image" },
+        { id: "6", url: "/0830.jpg", type: "image" },
+        { id: "7", url: "/P1244806.JPG", type: "image" },
+        { id: "8", url: "/0824(7).jpg", type: "image" },
       ]);
     }
 
@@ -135,7 +135,7 @@ const GalleryManager = () => {
         <input
           value={newVideoUrl}
           onChange={(e) => setNewVideoUrl(e.target.value)}
-          placeholder="/public/video.mp4 or YouTube link"
+          placeholder="/video.mp4 or YouTube link"
           className="w-full px-4 py-3 rounded-lg border border-primary/30 mb-3"
         />
 
@@ -159,7 +159,7 @@ const GalleryManager = () => {
           <input
             value={newImageUrl}
             onChange={(e) => setNewImageUrl(e.target.value)}
-            placeholder="/public/image.jpg or https://..."
+            placeholder="/image.jpg or https://..."
             className="flex-1 px-4 py-2 rounded-lg border border-primary/30"
           />
           <button

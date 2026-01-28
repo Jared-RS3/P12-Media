@@ -40,7 +40,7 @@ const Navigation = () => {
             {/* Logo Section */}
             <div className="flex items-center space-x-3">
               <img
-                src="/public/P12 Media Nav Bar Logo 2.png"
+                src="/P12 Media Nav Bar Logo 2.png"
                 alt="P12 Media Logo"
                 className="h-8 w-auto object-contain"
               />
