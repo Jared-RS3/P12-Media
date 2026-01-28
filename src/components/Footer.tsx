@@ -1,11 +1,4 @@
-import {
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Youtube,
-} from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { useContactDetails } from "../hooks/useContactDetails";
 
 const Footer = () => {
@@ -64,16 +57,6 @@ const Footer = () => {
               Connect
             </h5>
             <div className="flex items-center gap-4">
-              <a
-                href="https://www.instagram.com/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="p-2 rounded-md bg-surface hover:bg-surface-light transition"
-              >
-                <Instagram size={18} className="text-primary" />
-              </a>
-
               <a
                 href="https://www.youtube.com/yourchannel"
                 target="_blank"

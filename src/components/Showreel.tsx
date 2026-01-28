@@ -16,7 +16,7 @@ const Showreel = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="text-center mb-6">
-          <h2 className="text-5xl md:text-7xl font-bold mb-2 bg-white bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-7xl font-bold mb-2 text-foreground dark:bg-white dark:bg-clip-text dark:text-transparent">
             Showreel
           </h2>
           <p className="text-xl text-muted max-w-2xl mx-auto">

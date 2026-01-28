@@ -9,7 +9,7 @@ const About = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-white bg-clip-text text-transparent">
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-foreground dark:bg-white dark:bg-clip-text dark:text-transparent">
               Who We Are
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto"></div>

@@ -52,7 +52,7 @@ const Contact = () => {
     >
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-3 bg-clip-text text-transparent bg-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-3 text-foreground dark:bg-white dark:bg-clip-text dark:text-transparent">
             Contact Us
           </h2>
           <p className="text-muted max-w-2xl mx-auto">

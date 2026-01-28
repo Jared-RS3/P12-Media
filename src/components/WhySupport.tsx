@@ -53,7 +53,7 @@ const WhySupport = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-white bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-7xl font-bold mb-6 text-foreground dark:bg-white dark:bg-clip-text dark:text-transparent">
             Why Support P12 Media
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto leading-relaxed">

@@ -16,7 +16,7 @@ const AdminPanel = ({ onLogout }: AdminPanelProps) => {
   const [activeTab, setActiveTab] = useState<"contact" | "gallery">("contact");
   const [contactDetails, setContactDetails] = useState<ContactDetails>({
     email: "info@P12media.co.za",
-    phone: "+27 82 555 0123",
+    phone: "+27 73 028 8984",
     address: "Centurion, Gauteng, South Africa",
   });
 
@@ -144,7 +144,7 @@ const AdminPanel = ({ onLogout }: AdminPanelProps) => {
                   value={contactDetails.phone}
                   onChange={(e) => handleChange("phone", e.target.value)}
                   className="w-full px-4 py-3 bg-background border border-primary/30 rounded-lg text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                  placeholder="+27 82 555 0123"
+                  placeholder="+27 73 028 8984"
                 />
               </div>
 

@@ -8,7 +8,7 @@ interface ContactDetails {
 
 const defaultDetails: ContactDetails = {
   email: "info@P12media.co.za",
-  phone: "+27 82 555 0123",
+  phone: "+27 73 028 8984",
   address: "Centurion, Gauteng, South Africa",
 };
 
