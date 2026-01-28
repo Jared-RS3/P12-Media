@@ -1,0 +1,290 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+    --primary: 280 100% 70%;
+    --secondary: 320 100% 65%;
+    --accent: 240 100% 70%;
+    --muted: 0 0% 60%;
+    --surface: 0 0% 10%;
+    --surface-light: 0 0% 15%;
+    --border: 280 50% 30%;
+  }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
+    --primary: 280 80% 55%;
+    --secondary: 320 75% 50%;
+    --accent: 240 75% 60%;
+    --muted: 0 0% 40%;
+    --surface: 0 0% 95%;
+    --surface-light: 0 0% 92%;
+    --border: 280 40% 70%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  @media (max-width: 1024px) {
+    * {
+      cursor: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .bg-background {
+    background-color: hsl(var(--background));
+  }
+
+  .bg-foreground {
+    background-color: hsl(var(--foreground));
+  }
+
+  .bg-primary {
+    background-color: hsl(var(--primary));
+  }
+
+  .bg-secondary {
+    background-color: hsl(var(--secondary));
+  }
+
+  .bg-accent {
+    background-color: hsl(var(--accent));
+  }
+
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+
+  .bg-surface-light {
+    background-color: hsl(var(--surface-light));
+  }
+
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
+
+  .text-primary {
+    color: hsl(var(--primary));
+  }
+
+  .text-secondary {
+    color: hsl(var(--secondary));
+  }
+
+  .text-accent {
+    color: hsl(var(--accent));
+  }
+
+  .text-muted {
+    color: hsl(var(--muted));
+  }
+
+  .border-primary {
+    border-color: hsl(var(--primary));
+  }
+
+  .border-border {
+    border-color: hsl(var(--border));
+  }
+
+  .from-primary {
+    --tw-gradient-from: hsl(var(--primary)) var(--tw-gradient-from-position);
+  }
+
+  .to-primary {
+    --tw-gradient-to: hsl(var(--primary)) var(--tw-gradient-to-position);
+  }
+
+  .via-primary {
+    --tw-gradient-to: hsl(var(--primary) / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from),
+      hsl(var(--primary)) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+
+  .from-secondary {
+    --tw-gradient-from: hsl(var(--secondary)) var(--tw-gradient-from-position);
+  }
+
+  .to-secondary {
+    --tw-gradient-to: hsl(var(--secondary)) var(--tw-gradient-to-position);
+  }
+
+  .via-secondary {
+    --tw-gradient-to: hsl(var(--secondary) / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from),
+      hsl(var(--secondary)) var(--tw-gradient-via-position),
+      var(--tw-gradient-to);
+  }
+
+  .from-accent {
+    --tw-gradient-from: hsl(var(--accent)) var(--tw-gradient-from-position);
+  }
+
+  .to-accent {
+    --tw-gradient-to: hsl(var(--accent)) var(--tw-gradient-to-position);
+  }
+
+  .via-accent {
+    --tw-gradient-to: hsl(var(--accent) / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from),
+      hsl(var(--accent)) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+
+  .shadow-primary {
+    --tw-shadow-color: hsl(var(--primary));
+  }
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid hsl(var(--primary) / 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: hsl(var(--primary));
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+  box-shadow: 0 0 10px hsl(var(--primary) / 0.8);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out both;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Load Subspace from local files */
+@font-face {
+  font-family: "Subspace";
+  src: url("/subspace/Subspace-ywmDM.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Subspace";
+  src: url("/subspace/SubspaceBold-51mJG.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Subspace";
+  src: url("/subspace/SubspaceItalic-6YZJD.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Subspace";
+  src: url("/subspace/SubspaceBoldItalic-z8mDD.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* CSS variable + fallback */
+:root {
+  --title-font: "Subspace", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* apply to headings so titles use Subspace Bold */
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font);
+  font-weight: 700;
+}
+
+/* h3 uses normal system font */
+h3 {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+}
